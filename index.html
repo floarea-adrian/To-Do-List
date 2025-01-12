@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section id="createAccount" class="login-section">
+            <div class="login-leftSide f-col">
+                <img src=".//to-do-list.png" alt="logo">
+                <h2 class="citat">"Planul de astăzi este cheia succesului de mâine."</h2>
+            </div>
+            <div class="login-rightSide">
+                <div class="form-container">
+                    <h2>Create an account</h2>
+                    <p>Already have an account? <a href="#login-section">Log in</a></p>
+                
+                    <form class="form-design" action="register.php" method="POST">
+                        <div class="flex inputName" >
+                            <div class="input-group">
+                                <label for="first_name">First Name</label>
+                                <input type="text" id="first_name" name="first_name" placeholder="First name" required>
+                            </div>
+        
+                            <div class="input-group">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" id="last_name" name="last_name" placeholder="Last name" required>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Email" required>
+                            </div>
+        
+                            <div class="input-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            </div>
+        
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                            </div>
+        
+                        </div>
+                        <button type="submit" class="create-account-btn">Create account</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="login-section">
+            <div class="login-leftSide f-col">
+                <img src=".//to-do-list.png" alt="logo">
+                <h2 class="citat">"Planul de astăzi este cheia succesului de mâine."</h2>
+            </div>
+            <div class="login-rightSide flex" >
+                <div class="form-container" id="login-form-container">
+                <div class="form-container">
+                    <h1>To-Do List</h1>
+
+                
+                    <form class="form-design" action="login.php" method="POST">
+                        <div>
+                            <div class="input-group">
+                                <label for="userName">Email:</label>
+                                <input type="email" id="userName" name="email" placeholder="Email or username" required>
+                            </div>
+        
+                            <div class="input-group">
+                                <label for="passwordLog">Password</label>
+                                <input type="password" id="passwordLog" name="password" placeholder="Enter your password" required>
+                            </div>
+        
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="termsLog" name="terms" required>
+                                <label for="termsLog">I agree to the <a href="#login-section">Terms & Conditions</a></label>
+                            </div>
+        
+                        </div>
+                        <button type="submit">Log in</button>
+                        <p style="margin: 0;">or</p>
+                        <button onclick="window.location.href='index.html'">Create account</button>
+                    </form>
+                </div>
+ 
+            </div>
+        </section>
+    </main>
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
